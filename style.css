@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    background-color: #cfc4b8;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #e6d7c0;
+}
+
+h1{
+    text-align: center;
+    background-color: #ddd3c1;
+    color: #53705c;
+    border-style:double;
+    margin-left: 220px;
+    margin-right: 220px;
+    border-radius: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+
+.container{
+    position: relative; /*fluxo dapág. normal*/
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 900px;
+}
+
+.carrossel{
+    position: absolute;
+    width: 100%; /*100% do elemento pai*/
+    height: 100%;
+    transform-style: preserve-3d; /*para o atributo "perpective" ser acionado*/
+    animation: rotate360 30s infinite forwards linear ;
+}
+
+.imagem{
+    position: absolute; /*comportamento de bloco*/
+    width: 290px;
+    height: 187px;
+    top: 10px; /*referente ao elemento filho*/
+    left: 10px;
+    right: 10px;
+    background-size: cover; /*para a imagem cobrir toda a div*/
+    box-shadow: inset 0 0 0 2000px rgba(85, 50, 22, 0.2) ; /*sombra para dar efeito, o inset é para projetar a sombra para dentro da imagem*/
+    display: flex; /*para as imagens ficarem na msm linha*/
+    border-radius: 10px;
+
+}
+
+.imagem span{
+    margin-top: 55%;
+    margin-left: 10%;
+    font-size: 1em;
+
+}
+
+@keyframes rotate360{
+    from{
+        transform: rotateY(0deg); /*graus da rotação "deg"*/
+    }
+    to{
+        transform:rotateY(-360deg); /*para dar o movimento*/
+    }
+}
+
+.imagem:nth-child(1){
+    background-image: url(https://img.freepik.com/fotos-gratis/garota-de-olhos-escuros-surpresa-posando-no-banco-em-um-dia-ensolarado-foto-ao-ar-livre-de-uma-magnifica-mulher-francesa-sentada-na-rua-com-a-expressao-do-rosto-espantado_197531-11334.jpg?size=626&ext=jpg);
+    transform: rotateY(0deg) translateZ(430px);/*giro circular*/
+}
+
+.imagem:nth-child(2){
+    background-image: url(https://img.freepik.com/fotos-premium/retrato-3d-de-uma-escultura-antiga-com-efeito-de-falha-estilo-cyberpunk-doenca-conceitual-de-inteligencia-artificial-realidade-virtual-sistemas-de-aprendizagem-profunda-e-suspeita_616588-980.jpg?size=626&ext=jpg);
+    transform: rotateY(40deg) translateZ(430px);
+}
+
+.imagem:nth-child(3){
+    background-image: url(https://img.freepik.com/fotos-gratis/bela-vista-da-cidade-de-uma-cidade-urbana-um-tiro-de-cima_181624-406.jpg?size=626&ext=jpg);
+    transform: rotateY(80deg) translateZ(430px);
+}
+
+.imagem:nth-child(4){
+    background-image: url(https://img.freepik.com/fotos-gratis/homem-irreconhecivel-escrevendo-o-plano-no-diario-e-gadgets-deitado-na-mesa_1098-20132.jpg?size=626&ext=jpg);
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.imagem:nth-child(5){
+    background-image: url(https://img.freepik.com/fotos-gratis/ondas-do-mar-ao-por-do-sol_1203-2095.jpg?size=626&ext=jpg);
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.imagem:nth-child(6){
+    background-image: url(https://img.freepik.com/fotos-gratis/a-mulher-tira-uma-foto-na-fotocamara-retro-sentada-no-cafe_8353-1386.jpg?size=626&ext=jpg);
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.imagem:nth-child(7){
+    background-image: url(https://img.freepik.com/fotos-gratis/mesa-vintage-e-conceito-de-viagem_23-2147791080.jpg?size=626&ext=jpg);
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.imagem:nth-child(8){
+    background-image: url(https://img.freepik.com/fotos-gratis/feche-a-camera-digital-profissional-em-um-tripe_169016-10266.jpg?size=626&ext=jpg);
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.imagem:nth-child(9){
+    background-image: url(https://img.freepik.com/fotos-gratis/folhas-de-outono-nas-maos-de-meninas_1153-7384.jpg?size=626&ext=jpg);
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+footer{
+    background-color:  #53705c ;
+    color:  #d6c9b1;
+    text-indent: 10px;
+    display: block;
+    position:fixed;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    padding: 1px;
+    left: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    padding: 10px;
+}
+
+a{
+    color: #d6c9b1 ;
+    text-decoration: none;
+}
