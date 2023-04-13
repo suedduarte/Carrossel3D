@@ -1,3 +1,10 @@
+@charset"UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0;
     background-color: #cfc4b8;
@@ -6,21 +13,95 @@ body{
     color: #e6d7c0;
 }
 
-h1{
+header{
+    background-color: #53705c;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.img-header{
+    height: 3rem;
+    width: 3rem;
+    margin-right: 4rem ;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    color: #ffffff;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item{
+    margin: 0 15px;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+.nav-link:hover{
+    color: #ddd3c1;
+}
+
+.contato-button button{
+    border: none;
+    background-color: #ddd3c1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 7%;
+    transition: all 0.4s;
+}
+
+.contato-button button:hover{
+    background-color: #b9b0a1;
+}
+
+.contato-button button a{
+    text-decoration: none;
+    color: #53705c;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.titulo{
     text-align: center;
     background-color: #ddd3c1;
     color: #53705c;
     border-style:double;
+    margin-top: 2rem;
     margin-left: 220px;
     margin-right: 220px;
     border-radius: 10px;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    
 
 }
 
 .container{
-    position: relative; /*fluxo dapág. normal*/
+    position: relative; /*fluxo da pág. normal*/
     width: 320px;
     margin: 100px auto 0 auto;
     perspective: 900px;
@@ -110,22 +191,140 @@ h1{
 }
 
 footer{
-    background-color:  #53705c ;
-    color:  #d6c9b1;
-    text-indent: 10px;
-    display: block;
-    position:fixed;
+    margin-top: 36rem;
     width: 100%;
-    bottom: 0px;
-    text-align: center;
-    padding: 1px;
-    left: 0;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
-    padding: 10px;
+    color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px; /*espaçamento entre letras*/
 }
 
-a{
-    color: #d6c9b1 ;
+.img-footer{
+    height: 6rem;
+    width: 7rem;
+}
+
+.footer-link{
     text-decoration: none;
 }
+
+#footer_content{
+    background-color: #53705c;
+    display: grid; /*colunas*/ 
+    grid-template-columns: repeat(4, 1fr); /*para distribuir em 4 colunas*/
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media{
+    display: flex;
+    gap: 2rem; /*espaçmento entre os ícones*/
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem; /*para poder por um background*/
+    color: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i{
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover{
+    opacity: 0.8;
+}
+
+#instagram{
+    background-color: #283f2f;
+}
+
+#email{
+    background-color: #283f2f;
+}
+
+#linkedin{
+    background-color: #283f2f;
+}
+
+#github{
+    background-color: #283f2f;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;list-style: none;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-list .footer-link{
+    color: #ddd3c1;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover{
+    color: #283f2f;
+}
+
+#footer_subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#footer_subscribe p{
+    color: #ddd3c1;
+}
+
+#input_group{
+    display: flex;
+    align-items: center;
+    background-color: #ddd3c1;
+    border-radius: 4px;
+}
+
+#input_group input{
+    all: unset; /*para tirar a aparência padrão da input*/
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button{
+    background-color: #283f2f;
+    border: none;
+    color: #f5f5f5;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover{
+    opacity: 0.8;
+}
+
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    background-color: #4c6454;
+    font-size: 0.9;
+    padding: 1.5rem;
+    font-weight: 100;
+    color: #ddd3c1;
+}
+
